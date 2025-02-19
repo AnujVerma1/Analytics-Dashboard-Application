@@ -27,3 +27,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     await supabase.auth.signOut();
     navigate('/login');
   };
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.documentElement.classList.toggle('dark');
+  };
