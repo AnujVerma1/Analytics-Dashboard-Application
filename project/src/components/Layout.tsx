@@ -16,3 +16,9 @@ const navItems = [
 interface LayoutProps {
   children: React.ReactNode;
 }
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
