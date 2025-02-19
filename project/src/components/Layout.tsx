@@ -60,7 +60,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     ? 'bg-blue-600 text-white'
                     : 'text-gray-300 hover:bg-gray-800'
                 }`}
-              >
+              ><item.icon className="h-5 w-5" />
+              <span>{item.label}</span>
+            </Link>
+          ))}
+        </nav>
+        <div className="p-4">
+          <button
+            onClick={handleSignOut}
+            className="flex w-full items-center space-x-3 rounded-lg px-3 py-2 text-gray-300 hover:bg-gray-800"
+          >
 };
 
 export default Layout;
