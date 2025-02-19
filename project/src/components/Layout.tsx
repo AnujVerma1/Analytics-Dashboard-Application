@@ -22,3 +22,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    navigate('/login');
+  };
