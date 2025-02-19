@@ -69,7 +69,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <button
             onClick={handleSignOut}
             className="flex w-full items-center space-x-3 rounded-lg px-3 py-2 text-gray-300 hover:bg-gray-800"
-          >
+          ><LogOut className="h-5 w-5" />
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  {/* Main content */}
+  <div className="flex flex-1 flex-col overflow-hidden">
+    {/* Header */}
+    <header className="bg-white dark:bg-gray-800 shadow">
+      <div className="flex items-center justify-between px-4 py-3">
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="text-gray-500 lg:hidden"
+        >
 };
 
 export default Layout;
