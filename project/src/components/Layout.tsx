@@ -32,3 +32,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle('dark');
   };
+
+  return (
+    <div className={`h-screen flex ${darkMode ? 'dark' : ''}`}>
+      {/* Sidebar */}
+      <aside
+        className={`${
+
