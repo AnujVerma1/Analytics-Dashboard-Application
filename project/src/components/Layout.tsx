@@ -60,4 +60,56 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     ? 'bg-blue-600 text-white'
                     : 'text-gray-300 hover:bg-gray-800'
                 }`}
-              >
+              >item.icon className="h-5 w-5" />
+              <span>{item.label}</span>
+            </Link>
+          ))}
+        </nav>
+        <div className="p-4">
+          <button
+            onClick={handleSignOut}
+            className="flex w-full items-center space-x-3 rounded-lg px-3 py-2 text-gray-300 hover:bg-gray-800"
+          >
+            <LogOut className="h-5 w-5" />
+            <span>Sign Out</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    {/* Main content */}
+    <div className="flex flex-1 flex-col overflow-hidden">
+      {/* Header */}
+      <header className="bg-white dark:bg-gray-800 shadow">
+        <div className="flex items-center justify-between px-4 py-3">
+          <button
+            onClick={() => setSidebarOpen(true)}
+            className="text-gray-500 lg:hidden"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+          <div className="flex items-center space-x-4">
+            <button
+              onClick={toggleDarkMode}
+              className="rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              {darkMode ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Page content */}
+      <main className="flex-1 overflow-y-auto bg-gray-100 dark:bg-gray-900 p-4">
+        {children}
+      </main>
+    </div>
+  </div>
+);
+};
+
+export default Layout;
