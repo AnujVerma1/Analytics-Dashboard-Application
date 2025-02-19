@@ -12,3 +12,7 @@ const navItems = [
   { path: '/inventory', icon: BoxSeam, label: 'Inventory' },
   { path: '/settings', icon: Settings, label: 'Settings' },
 ];
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
