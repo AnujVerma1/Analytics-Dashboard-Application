@@ -47,4 +47,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <button
               onClick={() => setSidebarOpen(false)}
               className="lg:hidden"
-            ></button>
+              <X className="h-6 w-6" />
+            </button>
+            </div>
+          <nav className="flex-1 space-y-1 px-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`flex items-center space-x-3 rounded-lg px-3 py-2 transition-colors ${
+                  location.pathname === item.path
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-300 hover:bg-gray-800'
+                }`}
+              >
