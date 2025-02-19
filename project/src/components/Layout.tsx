@@ -84,7 +84,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <button
           onClick={() => setSidebarOpen(true)}
           className="text-gray-500 lg:hidden"
-        >
+        ><Menu className="h-6 w-6" />
+        </button>
+        <div className="flex items-center space-x-4">
+          <button
+            onClick={toggleDarkMode}
+            className="rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            {darkMode ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
+          </button>
 };
 
 export default Layout;
