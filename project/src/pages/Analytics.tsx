@@ -9,7 +9,11 @@ interface DailyStat {
     new_customers: number;
     page_views: number;
   }
-
+  interface CustomerSegment {
+    segment_name: string;
+    customer_count: number;
+  }
+  
 );
 };
 
