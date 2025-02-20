@@ -115,6 +115,15 @@ interface DailyStat {
                 nameKey="segment_name"
                 label
               >
+                {customerSegments.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
 
 );
 };
