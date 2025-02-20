@@ -37,6 +37,9 @@ interface DailyStat {
         .select('*')
         .gte('date', thirtyDaysAgo.toISOString())
         .order('date');
+
+        
+      if (statsError) throw statsError;
 );
 };
 
