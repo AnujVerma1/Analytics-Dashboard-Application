@@ -136,6 +136,7 @@ interface DailyStat {
                 <YAxis />
                 <Tooltip />
                 <Bar dataKey="total_orders" fill="#3B82F6" />
+                </BarChart>
 
 };
 
