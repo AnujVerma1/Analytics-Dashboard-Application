@@ -25,6 +25,12 @@ interface DailyStat {
     useEffect(() => {
         fetchAnalytics();
       }, []);
+
+      const fetchAnalytics = async () => {
+        try {
+          // Fetch daily stats for the last 30 days
+          const thirtyDaysAgo = new Date();
+          thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
 );
 };
 
