@@ -13,7 +13,7 @@ interface DailyStat {
     segment_name: string;
     customer_count: number;
   }
-  
+  const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
 );
 };
 
