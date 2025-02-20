@@ -97,6 +97,14 @@ interface DailyStat {
           </div>
         </div>
 
+         {/* Customer Distribution */}
+         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+          <h2 className="text-lg font-semibold mb-4">Customer Distribution</h2>
+          <div className="h-80">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+
 );
 };
 
