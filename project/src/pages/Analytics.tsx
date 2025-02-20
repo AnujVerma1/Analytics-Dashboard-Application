@@ -51,6 +51,12 @@ interface DailyStat {
         
       setDailyStats(stats || []);
       setCustomerSegments(segments || []);
+    } catch (error) {
+        console.error('Error fetching analytics:', error);
+        setError('Failed to load analytics data');
+      } finally {
+        setLoading(false);
+      }
 );
 };
 
