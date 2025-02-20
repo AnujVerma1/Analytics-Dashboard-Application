@@ -125,6 +125,8 @@ interface DailyStat {
           </div>
         </div>
 
+        {/* Daily Orders */}
+
 );
 };
 
