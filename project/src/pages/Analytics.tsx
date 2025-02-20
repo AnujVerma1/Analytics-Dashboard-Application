@@ -40,6 +40,11 @@ interface DailyStat {
 
         
       if (statsError) throw statsError;
+
+        // Fetch customer segments
+        const { data: segments, error: segmentsError } = await supabase
+        .from('customer_segments')
+        .select('*');
 );
 };
 
