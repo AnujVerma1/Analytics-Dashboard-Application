@@ -138,6 +138,11 @@ interface DailyStat {
                 <Bar dataKey="total_orders" fill="#3B82F6" />
                 </BarChart>
                 </ResponsiveContainer>
+                </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Analytics;
