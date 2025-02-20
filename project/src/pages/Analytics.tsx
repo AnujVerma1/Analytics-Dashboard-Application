@@ -79,6 +79,24 @@ interface DailyStat {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-bold">Analytics</h1>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Sales Trend */}
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+          <h2 className="text-lg font-semibold mb-4">Sales Trend</h2>
+          <div className="h-80">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={dailyStats}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" />
+                <YAxis />
+                <Tooltip />
+                <Line type="monotone" dataKey="total_sales" stroke="#3B82F6" />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
 );
 };
 
