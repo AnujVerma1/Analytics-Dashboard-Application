@@ -132,6 +132,8 @@ interface DailyStat {
         <ResponsiveContainer width="100%" height="100%">
         <BarChart data={dailyStats}>
         <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="date" />
+                <YAxis />
 
 };
 
