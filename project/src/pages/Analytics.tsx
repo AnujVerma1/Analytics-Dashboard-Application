@@ -31,6 +31,12 @@ interface DailyStat {
           // Fetch daily stats for the last 30 days
           const thirtyDaysAgo = new Date();
           thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+          const { data: stats, error: statsError } = await supabase
+        .from('daily_stats')
+        .select('*')
+        .gte('date', thirtyDaysAgo.toISOString())
+        .order('date');
 );
 };
 
