@@ -130,6 +130,7 @@ interface DailyStat {
         <h2 className="text-lg font-semibold mb-4">Daily Orders</h2>
         <div className="h-80">
         <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={dailyStats}>
 };
 
 export default Analytics;
