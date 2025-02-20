@@ -45,6 +45,8 @@ interface DailyStat {
         const { data: segments, error: segmentsError } = await supabase
         .from('customer_segments')
         .select('*');
+
+        if (segmentsError) throw segmentsError;
 );
 };
 
