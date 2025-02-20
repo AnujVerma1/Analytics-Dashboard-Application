@@ -134,6 +134,8 @@ interface DailyStat {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" />
                 <YAxis />
+                <Tooltip />
+                <Bar dataKey="total_orders" fill="#3B82F6" />
 
 };
 
