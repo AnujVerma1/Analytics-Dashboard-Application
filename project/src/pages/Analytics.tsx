@@ -128,7 +128,7 @@ interface DailyStat {
         {/* Daily Orders */}
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm lg:col-span-2">
         <h2 className="text-lg font-semibold mb-4">Daily Orders</h2>
-);
+        <div className="h-80">
 };
 
 export default Analytics;
