@@ -126,6 +126,7 @@ interface DailyStat {
         </div>
 
         {/* Daily Orders */}
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm lg:col-span-2">
 
 );
 };
