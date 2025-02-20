@@ -47,6 +47,10 @@ interface DailyStat {
         .select('*');
 
         if (segmentsError) throw segmentsError;
+
+        
+      setDailyStats(stats || []);
+      setCustomerSegments(segments || []);
 );
 };
 
