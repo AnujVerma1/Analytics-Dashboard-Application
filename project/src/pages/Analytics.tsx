@@ -137,7 +137,7 @@ interface DailyStat {
                 <Tooltip />
                 <Bar dataKey="total_orders" fill="#3B82F6" />
                 </BarChart>
-
+                </ResponsiveContainer>
 };
 
 export default Analytics;
