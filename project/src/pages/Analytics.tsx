@@ -14,6 +14,14 @@ interface DailyStat {
     customer_count: number;
   }
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
+
+
+  const Analytics = () => {
+    const [dailyStats, setDailyStats] = useState<DailyStat[]>([]);
+    const [customerSegments, setCustomerSegments] = useState<CustomerSegment[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+  
 );
 };
 
