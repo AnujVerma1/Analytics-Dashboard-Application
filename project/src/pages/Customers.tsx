@@ -14,5 +14,6 @@ const Customers = () => {
   const [customers, setCustomers] = useState<Customer[]>([]);
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
 
 export default Customers;
