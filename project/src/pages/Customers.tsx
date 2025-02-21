@@ -49,6 +49,14 @@ const Customers = () => {
       <div key={customer.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
       div className="flex items-center space-x-4 mb-4">
       <div className="h-12 w-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
-
+      <span className="text-blue-600 dark:text-blue-300 text-lg font-semibold">
+                    {customer.full_name ? customer.full_name.charAt(0).toUpperCase() : 'U'}
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">{customer.full_name || 'Unknown'}</h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">Customer</p>
+                </div>
+              </div>
 
 export default Customers;
