@@ -24,4 +24,5 @@ const Customers = () => {
       const { data, error } = await supabase
       .from('profiles')
       .select('id, email, full_name, created_at')
+      .order('created_at', { ascending: false });
 export default Customers;
