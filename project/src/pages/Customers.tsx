@@ -15,5 +15,6 @@ const Customers = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    fetchCustomers();
 
 export default Customers;
