@@ -16,5 +16,6 @@ const Customers = () => {
 
   useEffect(() => {
     fetchCustomers();
+  }, []);
 
 export default Customers;
