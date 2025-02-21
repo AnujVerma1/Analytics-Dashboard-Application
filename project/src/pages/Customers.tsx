@@ -27,5 +27,6 @@ const Customers = () => {
       .order('created_at', { ascending: false });
 
       if (error) throw error;
+      setCustomers(data || []);
 
 export default Customers;
