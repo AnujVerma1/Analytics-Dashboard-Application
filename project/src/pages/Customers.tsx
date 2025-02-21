@@ -32,5 +32,7 @@ const Customers = () => {
       console.error('Error fetching customers:', error);
     } finally {
       setLoading(false);
+    }
+  };
 
 export default Customers;
