@@ -59,4 +59,7 @@ const Customers = () => {
                 </div>
               </div>
 
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
+
 export default Customers;
