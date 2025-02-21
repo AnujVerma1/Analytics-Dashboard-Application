@@ -28,5 +28,6 @@ const Customers = () => {
 
       if (error) throw error;
       setCustomers(data || []);
+    } catch (error) {
 
 export default Customers;
