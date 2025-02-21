@@ -38,4 +38,9 @@ const Customers = () => {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-bold">Customers</h1>
+
+      {loading ? (
+        <div className="flex justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+
 export default Customers;
