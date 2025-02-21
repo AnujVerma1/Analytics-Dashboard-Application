@@ -29,5 +29,6 @@ const Customers = () => {
       if (error) throw error;
       setCustomers(data || []);
     } catch (error) {
+      console.error('Error fetching customers:', error);
 
 export default Customers;
