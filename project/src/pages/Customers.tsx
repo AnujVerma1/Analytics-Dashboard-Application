@@ -10,6 +10,9 @@ interface Customer {
   created_at: string;
 }
 
+const Customers = () => {
+  const [customers, setCustomers] = useState<Customer[]>([]);
+  const [loading, setLoading] = useState(true);
 
 
 export default Customers;
