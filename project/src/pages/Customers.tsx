@@ -22,4 +22,5 @@ const Customers = () => {
   const fetchCustomers = async () => {
     try {
       const { data, error } = await supabase
+      .from('profiles')
 export default Customers;
