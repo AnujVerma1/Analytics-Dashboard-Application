@@ -21,4 +21,5 @@ const Customers = () => {
   
   const fetchCustomers = async () => {
     try {
+      const { data, error } = await supabase
 export default Customers;
