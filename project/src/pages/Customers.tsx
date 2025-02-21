@@ -23,4 +23,5 @@ const Customers = () => {
     try {
       const { data, error } = await supabase
       .from('profiles')
+      .select('id, email, full_name, created_at')
 export default Customers;
