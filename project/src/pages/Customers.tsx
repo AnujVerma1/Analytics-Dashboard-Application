@@ -18,4 +18,7 @@ const Customers = () => {
     fetchCustomers();
   }, []);
 
+  
+  const fetchCustomers = async () => {
+    try {
 export default Customers;
