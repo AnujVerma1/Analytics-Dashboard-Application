@@ -61,5 +61,19 @@ const Customers = () => {
 
               <div className="space-y-3">
                 <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
+                <Mail className="h-4 w-4" />
+                  <span className="text-sm">{customer.email}</span>
+                </div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">
+                  Joined {new Date(customer.created_at).toLocaleDateString()}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default Customers;
