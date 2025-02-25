@@ -88,3 +88,4 @@ const Dashboard = () => {
 
       // Fetch customers
       const { data: customers, error: customersError } = await supabase
+      .from('profiles')
