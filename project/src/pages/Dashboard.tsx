@@ -50,3 +50,12 @@ const Dashboard = () => {
       }
     )
     .subscribe();
+
+    profilesChannel
+    .on(
+      'postgres_changes',
+      {
+        event: '*',
+        schema: 'public',
+        table: 'profiles'
+      },
