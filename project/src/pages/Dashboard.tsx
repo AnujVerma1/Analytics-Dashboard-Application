@@ -109,4 +109,7 @@ const Dashboard = () => {
       const sixMonthsAgo = new Date();
       sixMonthsAgo.setMonth(today.getMonth() - 6);
 
+      const { data: dailyStats, error } = await supabase
+      .from('daily_stats')
+
 
