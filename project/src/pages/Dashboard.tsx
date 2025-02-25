@@ -99,3 +99,8 @@ const Dashboard = () => {
       console.error('Error fetching dashboard stats:', error);
       setError('Failed to load dashboard data');
     } finally {
+      setLoading(false);
+    }
+  };
+
+
