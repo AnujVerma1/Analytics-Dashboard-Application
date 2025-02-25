@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-
 interface DashboardStats {
   totalSales: number;
   totalOrders: number;
@@ -35,61 +34,54 @@ const Dashboard = () => {
     const profilesChannel = supabase.channel('profiles-changes');
 
     ordersChannel
-    .on(
-      'postgres_changes',
-      {
-
-        event: '*',
-        schema: 'public',
-        table: 'orders'
-      },
-
-      () => {
-        fetchDashboardStats();
-        fetchSalesData();
-      }
-    )
-    .subscribe();
+      .on(
+        'postgres_changes',
+        {
+          event: '*',
+          schema: 'public',
+          table: 'orders'
+        },
+        () => {
+          fetchDashboardStats();
+          fetchSalesData();
+        }
+      )
+      .subscribe();
 
     profilesChannel
-    .on(
-      'postgres_changes',
-      {
-        event: '*',
-        schema: 'public',
-        table: 'profiles'
-      },
-      () => {
-        fetchDashboardStats();
-      }
-    )
-    .subscribe();
-     // Cleanup subscriptions
-     return () => {
+      .on(
+        'postgres_changes',
+        {
+          event: '*',
+          schema: 'public',
+          table: 'profiles'
+        },
+        () => {
+          fetchDashboardStats();
+        }
+      )
+      .subscribe();
+
+    // Cleanup subscriptions
+    return () => {
       ordersChannel.unsubscribe();
       profilesChannel.unsubscribe();
     };
   }, []);
+
   const fetchDashboardStats = async () => {
     try {
       // Fetch orders
       const { data: orders, error: ordersError } = await supabase
-      .from('orders')
-      .select('*');
+        .from('orders')
+        .select('*');
 
       if (ordersError) throw ordersError;
 
       // Fetch customers
       const { data: customers, error: customersError } = await supabase
-      .from('profiles')
-      .select('*');
-
-      if (ordersError) throw ordersError;
-
-      // Fetch customers
-      const { data: customers, error: customersError } = await supabase
-      .from('profiles')
-      .select('*');
+        .from('profiles')
+        .select('*');
 
       if (customersError) throw customersError;
 
@@ -110,13 +102,13 @@ const Dashboard = () => {
       sixMonthsAgo.setMonth(today.getMonth() - 6);
 
       const { data: dailyStats, error } = await supabase
-      .from('daily_stats')
-      .select('date, total_sales')
+        .from('daily_stats')
+        .select('date, total_sales')
         .gte('date', sixMonthsAgo.toISOString())
         .lte('date', today.toISOString())
         .order('date');
 
-        if (error) throw error;
+      if (error) throw error;
 
       // Process the data for the chart
       const monthlyData = (dailyStats || []).reduce((acc, stat) => {
@@ -125,7 +117,6 @@ const Dashboard = () => {
         
         if (!acc[monthYear]) {
           acc[monthYear] = 0;
-
         }
         acc[monthYear] += Number(stat.total_sales);
         return acc;
