@@ -70,3 +70,5 @@ const Dashboard = () => {
       profilesChannel.unsubscribe();
     };
   }, []);
+  const fetchDashboardStats = async () => {
+    try {
