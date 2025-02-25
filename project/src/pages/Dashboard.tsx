@@ -59,3 +59,5 @@ const Dashboard = () => {
         schema: 'public',
         table: 'profiles'
       },
+      () => {
+        fetchDashboardStats();
