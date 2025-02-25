@@ -91,3 +91,4 @@ const Dashboard = () => {
       .from('profiles')
       .select('*');
 
+      if (customersError) throw customersError;
