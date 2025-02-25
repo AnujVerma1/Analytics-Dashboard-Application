@@ -43,3 +43,10 @@ const Dashboard = () => {
         schema: 'public',
         table: 'orders'
       },
+
+      () => {
+        fetchDashboardStats();
+        fetchSalesData();
+      }
+    )
+    .subscribe();
