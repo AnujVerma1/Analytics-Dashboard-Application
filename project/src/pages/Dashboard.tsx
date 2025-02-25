@@ -76,3 +76,5 @@ const Dashboard = () => {
       const { data: orders, error: ordersError } = await supabase
       .from('orders')
       .select('*');
+
+      if (ordersError) throw ordersError;
