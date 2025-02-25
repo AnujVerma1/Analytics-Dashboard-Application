@@ -111,5 +111,9 @@ const Dashboard = () => {
 
       const { data: dailyStats, error } = await supabase
       .from('daily_stats')
+      .select('date, total_sales')
+        .gte('date', sixMonthsAgo.toISOString())
+        .lte('date', today.toISOString())
+        .order('date');
 
 
