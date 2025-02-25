@@ -66,3 +66,6 @@ const Dashboard = () => {
     .subscribe();
      // Cleanup subscriptions
      return () => {
+      ordersChannel.unsubscribe();
+      profilesChannel.unsubscribe();
+    };
