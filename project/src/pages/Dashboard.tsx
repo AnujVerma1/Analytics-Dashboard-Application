@@ -14,3 +14,22 @@ interface SalesData {
   name: string;
   sales: number;
 }
+
+const Dashboard = () => {
+  const [stats, setStats] = useState<DashboardStats>({
+    totalSales: 0,
+    totalOrders: 0,
+    activeCustomers: 0,
+    revenue: 0,
+  });
+  const [salesData, setSalesData] = useState<SalesData[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetchDashboardStats();
+    fetchSalesData();
+
+    // Set up real-time subscriptions
+    const ordersChannel = supabase.channel('orders-changes');
+    const profilesChannel = supabase.channel('profiles-changes');
