@@ -116,4 +116,14 @@ const Dashboard = () => {
         .lte('date', today.toISOString())
         .order('date');
 
+        if (error) throw error;
+
+      // Process the data for the chart
+      const monthlyData = (dailyStats || []).reduce((acc, stat) => {
+        const date = new Date(stat.date);
+        const monthYear = date.toLocaleString('default', { month: 'short', year: '2-digit' });
+        
+        if (!acc[monthYear]) {
+          acc[monthYear] = 0;
+
 
