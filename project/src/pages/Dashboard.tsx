@@ -64,3 +64,5 @@ const Dashboard = () => {
       }
     )
     .subscribe();
+     // Cleanup subscriptions
+     return () => {
