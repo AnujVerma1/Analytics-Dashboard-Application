@@ -97,3 +97,5 @@ const Dashboard = () => {
       updateStats(orders || [], customers || []);
     } catch (error) {
       console.error('Error fetching dashboard stats:', error);
+      setError('Failed to load dashboard data');
+    } finally {
