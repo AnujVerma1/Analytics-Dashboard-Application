@@ -33,3 +33,8 @@ const Dashboard = () => {
     // Set up real-time subscriptions
     const ordersChannel = supabase.channel('orders-changes');
     const profilesChannel = supabase.channel('profiles-changes');
+
+    ordersChannel
+    .on(
+      'postgres_changes',
+      {
