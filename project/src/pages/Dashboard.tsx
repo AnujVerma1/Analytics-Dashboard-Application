@@ -74,3 +74,5 @@ const Dashboard = () => {
     try {
       // Fetch orders
       const { data: orders, error: ordersError } = await supabase
+      .from('orders')
+      .select('*');
