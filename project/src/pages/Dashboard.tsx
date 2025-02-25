@@ -92,3 +92,6 @@ const Dashboard = () => {
       .select('*');
 
       if (customersError) throw customersError;
+
+      // Calculate stats
+      updateStats(orders || [], customers || []);
