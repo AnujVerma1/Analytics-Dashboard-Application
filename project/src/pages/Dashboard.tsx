@@ -105,5 +105,7 @@ const Dashboard = () => {
 
   const fetchSalesData = async () => {
     try {
+      const today = new Date();
+      const sixMonthsAgo = new Date();
 
 
