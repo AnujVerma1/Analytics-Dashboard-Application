@@ -107,5 +107,6 @@ const Dashboard = () => {
     try {
       const today = new Date();
       const sixMonthsAgo = new Date();
+      sixMonthsAgo.setMonth(today.getMonth() - 6);
 
 
