@@ -69,3 +69,4 @@ const Dashboard = () => {
       ordersChannel.unsubscribe();
       profilesChannel.unsubscribe();
     };
+  }, []);
