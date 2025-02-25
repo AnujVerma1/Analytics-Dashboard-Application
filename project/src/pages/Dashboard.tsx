@@ -61,3 +61,6 @@ const Dashboard = () => {
       },
       () => {
         fetchDashboardStats();
+      }
+    )
+    .subscribe();
