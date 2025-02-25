@@ -72,3 +72,5 @@ const Dashboard = () => {
   }, []);
   const fetchDashboardStats = async () => {
     try {
+      // Fetch orders
+      const { data: orders, error: ordersError } = await supabase
