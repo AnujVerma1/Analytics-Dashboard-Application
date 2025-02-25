@@ -9,3 +9,8 @@ interface DashboardStats {
   activeCustomers: number;
   revenue: number;
 }
+
+interface SalesData {
+  name: string;
+  sales: number;
+}
