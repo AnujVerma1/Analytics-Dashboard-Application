@@ -38,3 +38,8 @@ const Dashboard = () => {
     .on(
       'postgres_changes',
       {
+
+        event: '*',
+        schema: 'public',
+        table: 'orders'
+      },
