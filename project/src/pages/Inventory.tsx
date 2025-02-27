@@ -46,3 +46,8 @@ const Inventory = () => {
             <h2 className="text-lg font-semibold mb-4">Low Stock Alerts</h2>
             <div className="space-y-4">
             {lowStockProducts.map((product) => (
+
+<div
+key={product.id}
+className="flex items-center justify-between p-4 bg-red-50 dark:bg-red-900/20 rounded-lg"
+>
