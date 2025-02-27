@@ -40,3 +40,7 @@ const Inventory = () => {
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
         </div>
         ) : (
+          <>
+          {/* Low Stock Alerts */}
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+            <h2 className="text-lg font-semibold mb-4">Low Stock Alerts</h2>
