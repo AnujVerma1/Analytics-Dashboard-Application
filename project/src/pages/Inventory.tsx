@@ -26,3 +26,4 @@ const Inventory = () => {
     } catch (error) {
       console.error('Error fetching low stock products:', error);
      } finally {
+      setLoading(false);
