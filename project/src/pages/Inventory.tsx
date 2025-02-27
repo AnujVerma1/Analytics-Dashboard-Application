@@ -33,3 +33,5 @@ const Inventory = () => {
   return (
     <div className="space-y-6">
     <h1 className="text-2xl font-bold">Inventory Management</h1>
+
+    {loading ? (
