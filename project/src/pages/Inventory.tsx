@@ -10,3 +10,5 @@ interface Product {
 const Inventory = () => {
   const [lowStockProducts, setLowStockProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
