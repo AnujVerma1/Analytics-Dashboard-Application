@@ -22,3 +22,5 @@ const Inventory = () => {
 
 
       if (error) throw error;
+      if (data) setLowStockProducts(data);
+    } catch (error) {
