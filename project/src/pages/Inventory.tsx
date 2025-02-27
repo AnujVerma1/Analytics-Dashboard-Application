@@ -16,3 +16,4 @@ const Inventory = () => {
   }, []);
 
   const fetchLowStockProducts = async () => {
+    try {
