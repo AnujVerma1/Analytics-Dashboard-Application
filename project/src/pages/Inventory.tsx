@@ -14,3 +14,5 @@ const Inventory = () => {
   useEffect(() => {
     fetchLowStockProducts();
   }, []);
+
+  const fetchLowStockProducts = async () => {
