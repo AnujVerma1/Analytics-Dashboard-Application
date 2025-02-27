@@ -17,3 +17,4 @@ const Inventory = () => {
 
   const fetchLowStockProducts = async () => {
     try {
+      const { data, error } = await supabase
