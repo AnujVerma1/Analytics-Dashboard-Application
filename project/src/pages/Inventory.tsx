@@ -25,3 +25,4 @@ const Inventory = () => {
       if (data) setLowStockProducts(data);
     } catch (error) {
       console.error('Error fetching low stock products:', error);
+     } finally {
