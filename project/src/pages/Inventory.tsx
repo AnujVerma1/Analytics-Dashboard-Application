@@ -31,3 +31,4 @@ const Inventory = () => {
   };
 
   return (
+    <div className="space-y-6">
