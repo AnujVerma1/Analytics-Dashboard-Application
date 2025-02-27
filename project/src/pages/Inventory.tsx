@@ -12,3 +12,4 @@ const Inventory = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    fetchLowStockProducts();
