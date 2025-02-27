@@ -18,3 +18,4 @@ const Inventory = () => {
   const fetchLowStockProducts = async () => {
     try {
       const { data, error } = await supabase
+      .rpc('get_low_stock_products', { threshold: 10 });
