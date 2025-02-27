@@ -6,3 +6,5 @@ interface Product {
   name: string;
   stock: number;
 }
+
+const Inventory = () => {
