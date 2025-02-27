@@ -58,3 +58,22 @@ className="flex items-center justify-between p-4 bg-red-50 dark:bg-red-900/20 ro
                       Current Stock: {product.stock}
                     </p>
                   </div>
+                  <button className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700">
+                    Restock
+                  </button>
+                </div>
+              ))}
+              {lowStockProducts.length === 0 && (
+                <p className="text-gray-500 dark:text-gray-400">
+                  No products are currently low in stock.
+                </p>
+              )}
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default Inventory;
