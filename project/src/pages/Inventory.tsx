@@ -46,8 +46,15 @@ const Inventory = () => {
             <h2 className="text-lg font-semibold mb-4">Low Stock Alerts</h2>
             <div className="space-y-4">
             {lowStockProducts.map((product) => (
-
-<div
+              <div
 key={product.id}
 className="flex items-center justify-between p-4 bg-red-50 dark:bg-red-900/20 rounded-lg"
 >
+<div>
+                    <h3 className="font-medium text-red-800 dark:text-red-200">
+                      {product.name}
+                    </h3>
+                    <p className="text-sm text-red-600 dark:text-red-300">
+                      Current Stock: {product.stock}
+                    </p>
+                  </div>
