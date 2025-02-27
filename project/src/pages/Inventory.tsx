@@ -29,3 +29,5 @@ const Inventory = () => {
       setLoading(false);
     }
   };
+
+  return (
