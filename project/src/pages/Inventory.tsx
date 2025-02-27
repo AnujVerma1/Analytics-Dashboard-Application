@@ -8,3 +8,4 @@ interface Product {
 }
 
 const Inventory = () => {
+  const [lowStockProducts, setLowStockProducts] = useState<Product[]>([]);
