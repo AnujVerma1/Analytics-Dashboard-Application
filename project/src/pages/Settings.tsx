@@ -30,3 +30,6 @@ const Settings = () => {
        .select('id, email, full_name, avatar_url')
        .eq('id', user.id)
         .maybeSingle();
+
+        
+      if (fetchError) throw fetchError;
