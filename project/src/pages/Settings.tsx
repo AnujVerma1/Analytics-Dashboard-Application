@@ -14,3 +14,7 @@ const Settings = () => {
   const [updating, setUpdating] = useState(false);
   const [fullName, setFullName] = useState('');
   const [message, setMessage] = useState({ type: '', text: '' });
+
+  useEffect(() => {
+    fetchProfile();
+  }, []);
