@@ -26,3 +26,4 @@ const Settings = () => {
 
        // First try to get the existing profile
        let { data: existingProfile, error: fetchError } = await supabase
+       .from('profiles')
