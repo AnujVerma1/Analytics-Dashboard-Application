@@ -33,3 +33,5 @@ const Settings = () => {
 
         
       if (fetchError) throw fetchError;
+
+      if (!existingProfile) {
