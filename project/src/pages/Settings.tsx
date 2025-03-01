@@ -78,3 +78,6 @@ const Settings = () => {
         .from('profiles')
         .update({ full_name: fullName })
         .eq('id', user.id);
+
+        if (error) throw error;
+      
