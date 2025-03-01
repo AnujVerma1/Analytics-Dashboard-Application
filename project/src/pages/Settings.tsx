@@ -18,3 +18,5 @@ const Settings = () => {
   useEffect(() => {
     fetchProfile();
   }, []);
+
+  const fetchProfile = async () => {
