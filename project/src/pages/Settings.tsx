@@ -69,3 +69,7 @@ const Settings = () => {
     e.preventDefault();
     setUpdating(true);
     setMessage({ type: '', text: '' });
+
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) throw new Error('No user found');
