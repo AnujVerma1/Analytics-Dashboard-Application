@@ -35,3 +35,7 @@ const Settings = () => {
       if (fetchError) throw fetchError;
 
       if (!existingProfile) {
+         // Profile doesn't exist, create it
+         const { data: newProfile, error: insertError } = await supabase
+         .from('profiles')
+         .insert([
