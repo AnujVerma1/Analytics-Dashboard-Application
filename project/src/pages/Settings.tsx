@@ -28,3 +28,5 @@ const Settings = () => {
        let { data: existingProfile, error: fetchError } = await supabase
        .from('profiles')
        .select('id, email, full_name, avatar_url')
+       .eq('id', user.id)
+        .maybeSingle();
