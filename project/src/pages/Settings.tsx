@@ -20,3 +20,6 @@ const Settings = () => {
   }, []);
 
   const fetchProfile = async () => {
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) throw new Error('No user found');
