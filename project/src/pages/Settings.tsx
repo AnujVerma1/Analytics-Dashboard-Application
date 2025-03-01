@@ -57,3 +57,6 @@ const Settings = () => {
         setProfile(existingProfile);
         setFullName(existingProfile.full_name || '');
       }
+    } catch (error) {
+      console.error('Error fetching profile:', error);
+      setMessage({ type: 'error', text: 'Error loading profile' });
