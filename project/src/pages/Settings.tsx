@@ -52,3 +52,8 @@ const Settings = () => {
         if (insertError) throw insertError;
         existingProfile = newProfile;
       }
+
+      if (existingProfile) {
+        setProfile(existingProfile);
+        setFullName(existingProfile.full_name || '');
+      }
