@@ -45,3 +45,7 @@ const Settings = () => {
             full_name: '',
             role: 'user'
           }
+          
+        ])
+        .select('id, email, full_name, avatar_url')
+        .maybeSingle();
