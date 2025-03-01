@@ -23,3 +23,6 @@ const Settings = () => {
     try {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) throw new Error('No user found');
+
+       // First try to get the existing profile
+       let { data: existingProfile, error: fetchError } = await supabase
