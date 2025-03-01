@@ -12,3 +12,4 @@ const Settings = () => {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);
+  const [fullName, setFullName] = useState('');
