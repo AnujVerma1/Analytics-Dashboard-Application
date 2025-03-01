@@ -64,3 +64,8 @@ const Settings = () => {
       setLoading(false);
     }
   };
+
+  const updateProfile = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setUpdating(true);
+    setMessage({ type: '', text: '' });
