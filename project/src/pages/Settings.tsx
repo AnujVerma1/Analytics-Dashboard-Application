@@ -49,3 +49,6 @@ const Settings = () => {
         ])
         .select('id, email, full_name, avatar_url')
         .maybeSingle();
+        if (insertError) throw insertError;
+        existingProfile = newProfile;
+      }
