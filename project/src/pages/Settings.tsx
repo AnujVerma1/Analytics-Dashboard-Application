@@ -13,3 +13,4 @@ const Settings = () => {
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);
   const [fullName, setFullName] = useState('');
+  const [message, setMessage] = useState({ type: '', text: '' });
