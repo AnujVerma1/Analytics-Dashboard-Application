@@ -60,3 +60,7 @@ const Settings = () => {
     } catch (error) {
       console.error('Error fetching profile:', error);
       setMessage({ type: 'error', text: 'Error loading profile' });
+    } finally {
+      setLoading(false);
+    }
+  };
