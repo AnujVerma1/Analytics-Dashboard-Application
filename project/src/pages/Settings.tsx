@@ -39,3 +39,9 @@ const Settings = () => {
          const { data: newProfile, error: insertError } = await supabase
          .from('profiles')
          .insert([
+          {
+            id: user.id,
+            email: user.email,
+            full_name: '',
+            role: 'user'
+          }
