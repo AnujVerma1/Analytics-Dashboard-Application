@@ -8,5 +8,5 @@ interface Profile {
   avatar_url: string;
 }
 
-
 const Settings = () => {
+  const [profile, setProfile] = useState<Profile | null>(null);
