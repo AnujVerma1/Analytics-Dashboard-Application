@@ -5,3 +5,5 @@ import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import Orders from './pages/Orders';
 import Products from './pages/Products';
+import Customers from './pages/Customers';
+import Analytics from './pages/Analytics';
