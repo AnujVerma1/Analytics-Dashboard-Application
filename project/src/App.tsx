@@ -29,3 +29,6 @@ function App() {
 
     return () => subscription.unsubscribe();
   }, []);
+
+  if (loading) {
+    return (
