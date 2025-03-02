@@ -59,3 +59,4 @@ function App() {
                  <Route path="/inventory" element={<Inventory />} />
                  <Route path="/settings" element={<Settings />} />
                  </Routes>
+                 </Layout>
