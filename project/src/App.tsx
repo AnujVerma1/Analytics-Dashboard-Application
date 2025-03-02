@@ -62,3 +62,12 @@ function App() {
                  </Layout>
                  ) : (
                   <Navigate to="/login" replace />
+                )
+              }
+            />
+          </Routes>
+        </Router>
+      );
+    }
+    
+    export default App;
