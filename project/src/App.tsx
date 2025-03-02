@@ -57,3 +57,4 @@ function App() {
                  <Route path="/customers" element={<Customers />} />
                  <Route path="/analytics" element={<Analytics />} />
                  <Route path="/inventory" element={<Inventory />} />
+                 <Route path="/settings" element={<Settings />} />
