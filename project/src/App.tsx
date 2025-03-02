@@ -40,4 +40,8 @@ function App() {
 
   return (
     <Router>
-      <Routes></Routes>
+      <Routes>
+      <Route
+          path="/login"
+          element={!session ? <Login /> : <Navigate to="/" replace />}
+        />
