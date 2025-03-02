@@ -52,3 +52,4 @@ function App() {
               <Layout>
                  <Routes>
                  <Route path="/" element={<Dashboard />} />
+                 <Route path="/orders" element={<Orders />} />
