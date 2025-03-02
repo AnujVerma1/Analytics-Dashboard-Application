@@ -61,3 +61,4 @@ function App() {
                  </Routes>
                  </Layout>
                  ) : (
+                  <Navigate to="/login" replace />
