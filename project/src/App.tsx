@@ -14,3 +14,5 @@ import Login from './pages/Login';
 function App() {
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
