@@ -58,3 +58,4 @@ function App() {
                  <Route path="/analytics" element={<Analytics />} />
                  <Route path="/inventory" element={<Inventory />} />
                  <Route path="/settings" element={<Settings />} />
+                 </Routes>
