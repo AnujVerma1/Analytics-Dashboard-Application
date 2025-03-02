@@ -49,4 +49,6 @@ function App() {
           path="/*"
           element={
             session ? (
-              <Layout></Layout>
+              <Layout>
+                 <Routes>
+                 <Route path="/" element={<Dashboard />} />
