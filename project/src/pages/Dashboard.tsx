@@ -87,10 +87,11 @@ const Dashboard = () => {
 
       // Calculate stats
       updateStats(orders || [], customers || []);
-    } catch (error) {
-      console.error('Error fetching dashboard stats:', error);
-      setError('Failed to load dashboard data');
-    } finally {
+    } catch (error: any) {
+  console.error('Error fetching dashboard stats:', error.message || error);
+  setError(error.message || 'Failed to load dashboard data');  
+}
+ finally {
       setLoading(false);
     }
   };
